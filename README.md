@@ -16,7 +16,6 @@ This project establishes a robust and scalable data pipeline for multi-channel a
 ## Architecture Diagram
 
 ### 1. **Pipeline Workflow**
-1. Pipeline Workflow  
    ![Multi-Channel Ad Performance Pipeline](images/Multi-Channel%20Ad%20Performance%20Data%20Pipeline%20using%20DBT,%20Fivetran,%20BigQuery,%20Docker,%20Cloud%20Run%20and%20Cloud%20Composer.jpg)  
    This diagram showcases the flow from data ingestion to transformation and visualization.
 
