@@ -1,0 +1,17 @@
+dbt_ads_channels:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: your-project-id
+      dataset: your_dev_dataset
+      keyfile: "/path/to/your/keyfile.json"  # Ensure this path is correct
+      threads: 1
+
+    prod:
+      type: bigquery
+      method: oauth
+      project: your-project-id
+      dataset: your_prod_dataset
+      threads: 4

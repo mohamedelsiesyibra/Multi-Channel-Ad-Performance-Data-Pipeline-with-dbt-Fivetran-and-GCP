@@ -1,0 +1,166 @@
+version: 2
+
+models:
+  - name: int_facebook_ads__campaign_performance
+    description: >
+      This intermediate model processes the campaign performance data from Facebook Ads.
+    columns:
+      - name: date
+        description: The date of the campaign performance data.
+        tests:
+          - not_null
+      - name: campaign_name
+        description: The name of the campaign.
+        tests:
+          - not_null
+      - name: impressions
+        description: The number of times the ad was shown.
+        tests:
+          - not_null
+      - name: clicks
+        description: The number of times the ad was clicked.
+        tests:
+          - not_null
+      - name: spend
+        description: The total amount spent on the campaign.
+        tests:
+          - not_null
+      - name: conv
+        description: The number of conversions.
+        tests:
+          - not_null
+      - name: conv_value
+        description: The total value of conversions.
+        tests:
+          - not_null
+      - name: platform
+        description: The advertising platform (Facebook).
+        tests:
+          - not_null
+      - name: loaded_at_time
+        description: The time the record was loaded into the database.
+        tests:
+          - not_null
+
+  - name: int_linkedin_ads__campaign_performance
+    description: >
+      This intermediate model processes the campaign performance data from LinkedIn Ads.
+    columns:
+      - name: date
+        description: The date of the campaign performance data.
+        tests:
+          - not_null
+      - name: campaign_name
+        description: The name of the campaign.
+        tests:
+          - not_null
+      - name: impressions
+        description: The number of times the ad was shown.
+        tests:
+          - not_null
+      - name: clicks
+        description: The number of times the ad was clicked.
+        tests:
+          - not_null
+      - name: spend
+        description: The total amount spent on the campaign.
+        tests:
+          - not_null
+      - name: conv
+        description: The number of conversions.
+        tests:
+          - not_null
+      - name: conv_value
+        description: The total value of conversions.
+        tests:
+          - not_null
+      - name: platform
+        description: The advertising platform (LinkedIn).
+        tests:
+          - not_null
+      - name: loaded_at_time
+        description: The time the record was loaded into the database.
+        tests:
+          - not_null
+
+  - name: int_google_ads__campaign_performance
+    description: >
+      This intermediate model processes the campaign performance data from Google Ads.
+    columns:
+      - name: date
+        description: The date of the campaign performance data.
+        tests:
+          - not_null
+      - name: campaign_name
+        description: The name of the campaign.
+        tests:
+          - not_null
+      - name: impressions
+        description: The number of times the ad was shown.
+        tests:
+          - not_null
+      - name: clicks
+        description: The number of times the ad was clicked.
+        tests:
+          - not_null
+      - name: spend
+        description: The total amount spent on the campaign.
+        tests:
+          - not_null
+      - name: conv
+        description: The number of conversions.
+        tests:
+          - not_null
+      - name: conv_value
+        description: The total value of conversions.
+        tests:
+          - not_null
+      - name: platform
+        description: The advertising platform (Google).
+        tests:
+          - not_null
+      - name: loaded_at_time
+        description: The time the record was loaded into the database.
+        tests:
+          - not_null
+
+  - name: int_blended_ads__campaign_performance
+    description: >
+      This intermediate model unions the campaign performance data from Facebook Ads, LinkedIn Ads, and Google Ads.
+    columns:
+      - name: date
+        description: The date of the campaign performance data.
+        tests:
+          - not_null
+      - name: campaign_name
+        description: The name of the campaign.
+        tests:
+          - not_null
+      - name: impressions
+        description: The number of times the ad was shown.
+        tests:
+          - not_null
+      - name: clicks
+        description: The number of times the ad was clicked.
+        tests:
+          - not_null
+      - name: spend
+        description: The total amount spent on the campaign.
+        tests:
+          - not_null
+      - name: conv
+        description: The number of conversions.
+        tests:
+          - not_null
+      - name: conv_value
+        description: The total value of conversions.
+        tests:
+          - not_null
+      - name: platform
+        description: The advertising platform (Facebook, LinkedIn, Google).
+        tests:
+          - not_null
+      - name: loaded_at_time
+        description: The time the record was loaded into the database.
+        tests:
+          - not_null

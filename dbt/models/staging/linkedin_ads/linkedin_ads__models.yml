@@ -1,0 +1,138 @@
+version: 2
+
+models:
+  - name: stg_linkedin_ads__ad_analytics_by_campaign
+    description: Staging model for LinkedIn Ads ad analytics by campaign data
+    columns:
+      - name: campaign_id
+        description: Unique identifier for the campaign
+      - name: action_clicks
+        description: The number of action clicks
+      - name: day
+        description: The date of the performance data
+      - name: ad_unit_clicks
+        description: The number of ad unit clicks
+      - name: approximate_member_reach
+        description: The approximate member reach
+      - name: card_clicks
+        description: The number of card clicks
+      - name: card_impressions
+        description: The number of card impressions
+      - name: clicks
+        description: The number of clicks
+      - name: comment_likes
+        description: The number of comment likes
+      - name: comments
+        description: The number of comments
+      - name: company_page_clicks
+        description: The number of company page clicks
+      - name: conversion_value_in_local_currency
+        description: The conversion value in local currency
+      - name: cost_in_local_currency
+        description: The cost in local currency
+      - name: cost_in_usd
+        description: The cost in USD
+      - name: external_website_conversions
+        description: The number of external website conversions
+      - name: external_website_post_click_conversions
+        description: The number of external website post-click conversions
+      - name: external_website_post_view_conversions
+        description: The number of external website post-view conversions
+      - name: follows
+        description: The number of follows
+      - name: full_screen_plays
+        description: The number of full-screen plays
+      - name: impressions
+        description: The number of impressions
+      - name: landing_page_clicks
+        description: The number of landing page clicks
+      - name: lead_generation_mail_contact_info_shares
+        description: The number of lead generation mail contact info shares
+      - name: lead_generation_mail_interested_clicks
+        description: The number of lead generation mail interested clicks
+      - name: likes
+        description: The number of likes
+      - name: one_click_lead_form_opens
+        description: The number of one-click lead form opens
+      - name: one_click_leads
+        description: The number of one-click leads
+      - name: opens
+        description: The number of opens
+      - name: other_engagements
+        description: The number of other engagements
+      - name: sends
+        description: The number of sends
+      - name: shares
+        description: The number of shares
+      - name: text_url_clicks
+        description: The number of text URL clicks
+      - name: total_engagements
+        description: The total number of engagements
+      - name: video_completions
+        description: The number of video completions
+      - name: video_first_quartile_completions
+        description: The number of video first quartile completions
+      - name: video_mid_point_completions
+        description: The number of video mid-point completions
+      - name: video_third_quartile_completions
+        description: The number of video third quartile completions
+      - name: video_starts
+        description: The number of video starts
+      - name: video_views
+        description: The number of video views
+      - name: loaded_at_time
+        description: The time the record was loaded into the database
+
+  - name: stg_linkedin_ads__campaign_history
+    description: Staging model for LinkedIn Ads campaign details data
+    columns:
+      - name: id
+        description: Unique identifier for the campaign
+      - name: name
+        description: The name of the campaign
+      - name: last_modified_time
+        description: The timestamp when the campaign was last modified
+      - name: campaign_group_id
+        description: The ID of the campaign group
+      - name: account_id
+        description: The ID of the account
+      - name: created_time
+        description: The timestamp when the campaign was created
+      - name: associated_entity
+        description: The associated entity of the campaign
+      - name: audience_expansion_enabled
+        description: Indicates if audience expansion is enabled
+      - name: cost_type
+        description: The cost type of the campaign
+      - name: creative_selection
+        description: The creative selection for the campaign
+      - name: daily_budget_amount
+        description: The daily budget amount for the campaign
+      - name: daily_budget_currency_code
+        description: The currency code for the daily budget
+      - name: locale_country
+        description: The locale country for the campaign
+      - name: locale_language
+        description: The locale language for the campaign
+      - name: objective_type
+        description: The objective type of the campaign
+      - name: offsite_delivery_enabled
+        description: Indicates if offsite delivery is enabled
+      - name: run_schedule_start
+        description: The start date of the campaign run schedule
+      - name: run_schedule_end
+        description: The end date of the campaign run schedule
+      - name: type
+        description: The type of the campaign
+      - name: unit_cost_amount
+        description: The unit cost amount for the campaign
+      - name: unit_cost_currency_code
+        description: The currency code for the unit cost
+      - name: version_tag
+        description: The version tag of the campaign
+      - name: optimization_target_type
+        description: The optimization target type of the campaign
+      - name: status
+        description: The status of the campaign
+      - name: format
+        description: The format of the campaign

@@ -1,0 +1,97 @@
+version: 2
+
+sources:
+  - name: facebook_ads
+    schema: facebook_ads
+    database: "{{ var('database') }}"
+    freshness:
+      warn_after: {count: 1, period: day}
+      error_after: {count: 2, period: day}
+    loaded_at_field: loaded_at_time
+    tables:
+      - name: basic_all_levels
+        description: Each record represents the daily performance of a campaign in Facebook.
+        columns:
+          - name: _fivetran_id
+            description: Unique identifier for the Fivetran sync
+          - name: date
+            description: The date of the campaign performance data
+          - name: account_id
+            description: The ID of the ad account, links to ACCOUNT_HISTORY.id
+          - name: ad_id
+            description: The ID of the ad
+          - name: actions
+            description: The actions taken on the campaign
+          - name: ad_name
+            description: The name of the ad
+          - name: adset_name
+            description: The name of the ad set
+          - name: campaign_name
+            description: The name of the campaign
+          - name: cost_per_action_type
+            description: The cost per action type for the campaign
+          - name: cost_per_inline_link_click
+            description: The cost per inline link click for the campaign
+          - name: cpc
+            description: Cost per click
+          - name: cpm
+            description: Cost per thousand impressions
+          - name: ctr
+            description: Click-through rate
+          - name: frequency
+            description: The average number of times each person saw the ad
+          - name: impressions
+            description: The number of times the ad was shown
+          - name: inline_link_click_ctr
+            description: Inline link click-through rate
+          - name: inline_link_clicks
+            description: The number of inline link clicks
+          - name: reach
+            description: The number of people who saw the ad at least once
+          - name: spend
+            description: The amount spent on the campaign
+          - name: loaded_at_time
+            description: The time the record was loaded into the database
+      - name: basic_ad_action_value
+        description: Each record represents the daily performance of an ad with action values in Facebook.
+        columns:
+          - name: _fivetran_id
+            description: Unique identifier for the Fivetran sync
+          - name: date
+            description: The date of the campaign performance data
+          - name: account_id
+            description: The ID of the ad account
+          - name: ad_id
+            description: The ID of the ad
+          - name: action
+            description: The action taken on the ad
+          - name: action_values
+            description: The values associated with the actions taken on the ad
+          - name: ad_name
+            description: The name of the ad
+          - name: adset_name
+            description: The name of the ad set
+          - name: cost_per_action_type
+            description: The cost per action type for the ad
+          - name: cost_per_inline_link_click
+            description: The cost per inline link click for the ad
+          - name: cpc
+            description: Cost per click
+          - name: cpm
+            description: Cost per thousand impressions
+          - name: ctr
+            description: Click-through rate
+          - name: frequency
+            description: The average number of times each person saw the ad
+          - name: impressions
+            description: The number of times the ad was shown
+          - name: inline_link_click_ctr
+            description: Inline link click-through rate
+          - name: inline_link_clicks
+            description: The number of inline link clicks
+          - name: reach
+            description: The number of people who saw the ad at least once
+          - name: spend
+            description: The amount spent on the ad
+          - name: loaded_at_time
+            description: The time the record was loaded into the database

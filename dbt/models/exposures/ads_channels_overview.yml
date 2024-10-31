@@ -1,0 +1,18 @@
+version: 2
+
+exposures:
+  - name: ads_performance_analysis
+    type: dashboard
+    description: >
+      This dbt project consolidates advertising performance data from three key marketing channels: Facebook, Google Ads, and LinkedIn. 
+      It integrates individual channel performance metrics into a unified view, offering a comprehensive analysis of overall ad performance and effectiveness.
+
+    owner:
+      name: Mohamed Elsiesy
+      email: mohamedelsiesyibra@gmail.com
+
+    depends_on:
+      - ref('marts_marketing__final_campaign_performance')
+    maturity: high
+    url: https://lookerstudio.google.com/s/pYzJovn131k
+    tags: [marketing, ad_channels, campaign_performance]

@@ -1,0 +1,100 @@
+version: 2
+
+sources:
+  - name: google_ads
+    schema: google_ads
+    database: "{{ var('database') }}"
+    freshness:
+      warn_after: {count: 1, period: day}
+      error_after: {count: 2, period: day}
+    loaded_at_field: loaded_at_time
+    tables:
+      - name: campaign_history
+        description: Each record represents the daily performance of a Google Ads campaign.
+        columns:
+          - name: id
+            description: Unique identifier for the record
+          - name: updated_at
+            description: The timestamp when the record was last updated
+          - name: base_campaign_id
+            description: The ID of the base campaign
+          - name: customer_id
+            description: The ID of the customer
+          - name: ad_serving_optimization_status
+            description: The ad serving optimization status
+          - name: advertising_channel_sub_type
+            description: The sub-type of the advertising channel
+          - name: advertising_channel_type
+            description: The type of the advertising channel
+          - name: experiment_type
+            description: The type of experiment
+          - name: end_date
+            description: The end date of the campaign
+          - name: final_url_suffix
+            description: The suffix for the final URL
+          - name: frequency_caps
+            description: The frequency caps for the campaign
+          - name: name
+            description: The name of the campaign
+          - name: serving_status
+            description: The serving status of the campaign
+          - name: start_date
+            description: The start date of the campaign
+          - name: status
+            description: The status of the campaign
+          - name: tracking_url_template
+            description: The tracking URL template
+          - name: vanity_pharma_display_url_mode
+            description: The display URL mode for vanity pharma
+          - name: vanity_pharma_text
+            description: The text for vanity pharma
+          - name: optimization_score
+            description: The optimization score of the campaign
+          - name: payment_mode
+            description: The payment mode for the campaign
+          - name: video_brand_safety_suitability
+            description: The video brand safety suitability
+
+      - name: campaign_stats
+        description: Each record represents the daily performance metrics of a Google Ads campaign.
+        columns:
+          - name: _fivetran_id
+            description: Unique identifier for the Fivetran sync
+          - name: date
+            description: The date of the performance data
+          - name: customer_id
+            description: The ID of the customer
+          - name: active_view_impressions
+            description: The number of active view impressions
+          - name: id
+            description: Unique identifier for the record
+          - name: active_view_measurability
+            description: The active view measurability
+          - name: active_view_measurable_cost_micros
+            description: The cost of measurable active view impressions in micros
+          - name: active_view_measurable_impressions
+            description: The number of measurable active view impressions
+          - name: active_view_viewability
+            description: The active view viewability
+          - name: ad_network_type
+            description: The type of ad network
+          - name: clicks
+            description: The number of clicks
+          - name: conversions
+            description: The number of conversions
+          - name: conversion_value
+            description: The value of conversions
+          - name: cost_micros
+            description: The cost in micros
+          - name: device
+            description: The type of device
+          - name: impressions
+            description: The number of impressions
+          - name: interactions
+            description: The number of interactions
+          - name: interaction_event_types
+            description: The types of interaction events
+          - name: view_through_conversions
+            description: The number of view-through conversions
+          - name: loaded_at_time
+            description: The time the record was loaded into the database

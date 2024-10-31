@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: marts_marketing__final_campaign_performance
+    description: >
+      This final model aggregates the campaign performance data from Facebook Ads, LinkedIn Ads, and Google Ads.
+      It includes metrics such as impressions, clicks, spend, conversions, conversion value, CPC, CPM, ROAS, and CPA.
+    config:
+      contract:
+        enforced: true
+    columns:
+      - name: date
+        description: The date of the campaign performance data.
+        data_type: date
+        tests:
+          - not_null
+      - name: campaign_name
+        description: The name of the campaign.
+        data_type: string
+        tests:
+          - not_null
+      - name: platform
+        description: The advertising platform (e.g., Facebook, LinkedIn, Google).
+        data_type: string
+        tests:
+          - not_null
+      - name: impressions
+        description: The number of times the ad was shown.
+        data_type: integer
+        tests:
+          - not_null
+      - name: clicks
+        description: The number of times the ad was clicked.
+        data_type: integer
+        tests:
+          - not_null
+      - name: spend
+        description: The total amount spent on the campaign.
+        data_type: float
+        tests:
+          - not_null
+      - name: conv
+        description: The number of conversions.
+        data_type: integer
+        tests:
+          - not_null
+      - name: conv_value
+        description: The total value of conversions.
+        data_type: integer  
+        tests:
+          - not_null
+      - name: cpc
+        description: Cost Per Click (spend divided by clicks).
+        data_type: float
+      - name: cpm
+        description: Cost Per Thousand Impressions (spend divided by impressions times 1000).
+        data_type: float
+      - name: roas
+        description: Return on Ad Spend (conversion value divided by spend).
+        data_type: float
+      - name: cost_per_conv
+        description: Cost Per Conversion (spend divided by conversions).
+        data_type: float
+      - name: campaign_id_date_platform
+        description: A unique identifier for the campaign, date, and platform combination.
+        data_type: string
+        tests:
+          - not_null
+          - unique
+      - name: loaded_at_time
+        description: The time when the data was loaded.
+        data_type: date  
