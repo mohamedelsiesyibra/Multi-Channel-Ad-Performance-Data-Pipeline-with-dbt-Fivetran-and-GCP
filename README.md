@@ -19,12 +19,15 @@ This project establishes a robust and scalable data pipeline for multi-channel a
    ![Multi-Channel Ad Performance Pipeline](images/Multi-Channel%20Ad%20Performance%20Data%20Pipeline%20using%20DBT,%20Fivetran,%20BigQuery,%20Docker,%20Cloud%20Run%20and%20Cloud%20Composer.jpg)  
    This diagram showcases the flow from data ingestion to transformation and visualization.
 
+---
 
 ### **dbt on Cloud Run in Production**
    ![dbt on Cloud Run](images/DBT%20on%20Cloud%20Run.png)  
    dbt models are executed as Cloud Run jobs, orchestrated by Cloud Composer, allowing for flexible scaling and efficient management of transformations in production.
 
    **References**: Deploying dbt on Cloud Run was inspired by [Richard He](https://www.youtube.com/@practicalgcp2780) and his practical insights on Google Cloud Platform.
+   
+---
 
 ### **Looker Studio Reports**
    - **Multi-Channel Report**: [View on Looker Studio](https://lookerstudio.google.com/reporting/a5e71242-3952-4c30-a2c5-e1d8ee3eac29)
